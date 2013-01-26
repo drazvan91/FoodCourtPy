@@ -1,0 +1,8 @@
+{% extends "BaseMobile.html" %}
+{% block content %}
+<ul data-role="listview" data-inset="true">
+	{% for category in categories %}
+	<li>{{category.name}}</li>
+	{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "BaseMobile.html" %}
+{% block content %}
+<ul data-role="listview" data-inset="true">
+	{% for restaurant in restaurants %}
+	<li><a href="/m/order/{{restaurant.id}}/">{{restaurant.name}}</a></li>
+	{% endfor %}
+</ul>
+{% endblock %}
