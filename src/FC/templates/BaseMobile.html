@@ -12,9 +12,9 @@
 
 <body> 
 	<div data-role="page"> 
-		<div data-role="header">{% block header %}My amazing site{% endblock %}</div> 
+		<div data-role="header" data-position="fixed">{% block header %}<h1>My amazing site</h1>{% endblock %}</div> 
 		<div data-role="content">{% block content %}My amazing site{% endblock %}</div> 
-		<div data-role="footer">{% block footer %}My amazing site{% endblock %}</div> 
+		<div data-role="footer" data-position="fixed">{% block footer %}<h1>My amazing site</h1>{% endblock %}</div> 
 	</div> 
 </body>
 </html>

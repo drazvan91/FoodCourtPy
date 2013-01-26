@@ -1,8 +1,37 @@
 {% extends "BaseMobile.html" %}
+{% block header %}
+<a href="/m/order/" data-icon="delete">cancel</a>
+<h1>{{restaurant.name}}</h1>
+{% endblock %}
 {% block content %}
-<ul data-role="listview" data-inset="true">
-	{% for category in categories %}
-	<li>{{category.name}}</li>
+
+	<ul data-role="listview" data-inset="true">
+	{% for category in orderpanel.list_category %}
+		<li data-role="list-divider">{{category.category.name}}</li>
+			{% for product in category.list_product %}
+				<li><a href="#">
+					<img src="/static/album-bb.jpg"/>
+					<h3>{{ product.product.name }}</h3>
+					</a>
+					<a data-transition="pop" data-position-to="window" data-rel="popup"
+					     href="#order" >Order</a>
+				</li>
+			{% endfor %}
+	
 	{% endfor %}
-</ul>
+	</ul>
+	<div data-role="popup" id="order" style="max-width:340px;">
+		<h3>Order this?</h3>
+	</div>
+{% endblock %}
+{% block footer %}
+<div data-role = "footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#">One</a></li>
+			<li><a href="#">Two</a></li>
+			<li><a href="#">Three</a></li>
+		</ul>
+	</div>
+</div>
 {% endblock %}

@@ -1,4 +1,8 @@
 {% extends "BaseMobile.html" %}
+{% block header %}
+<a data-rel="back" href="#">back</a>
+<h1>{{restaurant.name}}</h1>
+{% endblock %}
 {% block content %}
 <ul data-role="listview" data-inset="true">
 	{% for day in days %}
