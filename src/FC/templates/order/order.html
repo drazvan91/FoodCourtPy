@@ -1,0 +1,27 @@
+<html>
+<head>
+	<script type="text/javascript" src="/static/order.js" ></script>
+	<script type="text/javascript" src="/static/jquery.js" ></script>
+</head>
+<body>
+Restaurant: 
+<select id="select_restaurant" onchange="select_restaurant_changed()">
+	{% for restaurant in restaurants %}
+	<option value="{{restaurant.id}}">{{restaurant.name}}</option>
+	{% endfor %}
+</select> <br />
+Date: <select id="select_date">
+		</select><br />
+<hr />
+<table><tr>
+<td><ul id="categories">
+</ul>
+</td>
+<td>
+	<ul id="products">
+	
+	</ul>
+</td
+</tr></table>
+</body>
+</html>
